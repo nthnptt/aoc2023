@@ -3,7 +3,9 @@
 namespace AOC\One;
 
 use AOC\Shared\AbstractAocDay;
+use AOC\Shared\Attribute\AocDay;
 
+#[AocDay(day: 1, fileData: 'data/one.txt')]
 class DayOne extends AbstractAocDay
 {
     public function partOne(): int

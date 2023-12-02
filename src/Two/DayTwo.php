@@ -3,7 +3,9 @@
 namespace AOC\Two;
 
 use AOC\Shared\AbstractAocDay;
+use AOC\Shared\Attribute\AocDay;
 
+#[AocDay(day: 2, fileData: 'data/two.txt')]
 class DayTwo extends AbstractAocDay
 {
     const int MAX_RED = 12;
