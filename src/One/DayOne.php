@@ -4,7 +4,7 @@ namespace AOC\One;
 
 use AOC\Shared\AbstractAocDay;
 
-class DayOneAbstract extends AbstractAocDay
+class DayOne extends AbstractAocDay
 {
     public function partOne(): int
     {

@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
 
-use AOC\One\DayOneAbstract;
+use AOC\One\DayOne;
 use AOC\Shared\DataProvider\FileReader;
+use AOC\Two\DayTwo;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\Table;
@@ -14,15 +15,20 @@ require __DIR__ . '/../vendor/autoload.php';
 $application = new Application();
 $application->register('run')
     ->setCode(function (InputInterface $input, OutputInterface $output): int {
-        $file = new FileReader('data/one.txt');
-        $day = new DayOneAbstract($file->getLines());
-        $resultPartOne = $day->partOne();
-        $resultPartTwo = $day->partTwo();
+        $days = [
+            new DayOne(new FileReader('data/one.txt')),
+            new DayTwo(new FileReader('data/two.txt')),
+        ];
+        $rows = [];
+        foreach ($days as $key => $day) {
+            $resultPartOne = $day->partOne();
+            $resultPartTwo = $day->partTwo();
+            $rows[] = [$key, $resultPartOne, $resultPartTwo];
+        }
+
         $table = new Table($output);
         $table->setHeaders(['Day', 'Part 1', 'Part 2'])
-            ->setRows([
-                [1, $resultPartOne, $resultPartTwo]
-            ]);
+            ->setRows($rows);
         $table->render();
         return Command::SUCCESS;
     });
