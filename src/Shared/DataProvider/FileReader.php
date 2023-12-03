@@ -6,6 +6,10 @@ class FileReader implements DataProviderInterface
 {
     public function __construct(private string $filename)
     {
+        if(!file_exists($this->filename)) {
+            throw new \LogicException('File not found');
+
+        }
     }
 
     public function getLines(): array
