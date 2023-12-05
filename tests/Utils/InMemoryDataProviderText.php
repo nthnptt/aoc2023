@@ -5,21 +5,21 @@ namespace Test\Utils;
 
 use AOC\Shared\DataProvider\DataProviderInterface;
 
-class InMemoryDataProviderLines implements DataProviderInterface
+class InMemoryDataProviderText implements DataProviderInterface
 {
     public function __construct(
-        private array $data
+        private string $test
     )
     {
     }
 
     public function getLines(): array
     {
-        return $this->data;
+        return [];
     }
 
     public function get(): string
     {
-        return '';
+        return $this->test;
     }
 }

@@ -6,7 +6,7 @@ class FileReader implements DataProviderInterface
 {
     public function __construct(private string $filename)
     {
-        if(!file_exists($this->filename)) {
+        if (!file_exists($this->filename)) {
             throw new \LogicException('File not found');
 
         }
@@ -14,10 +14,10 @@ class FileReader implements DataProviderInterface
 
     public function getLines(): array
     {
-        return explode(PHP_EOL, $this->getData());
+        return explode(PHP_EOL, $this->get());
     }
 
-    private function getData(): string
+    public function get(): string
     {
         return file_get_contents($this->filename);
     }

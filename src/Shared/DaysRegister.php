@@ -45,6 +45,7 @@ class DaysRegister
             require __DIR__ . '/../Two/DayTwo.php';
             require __DIR__ . '/../Three/DayThree.php';
             require __DIR__ . '/../Four/DayFour.php';
+            require __DIR__ . '/../Five/DayFive.php';
 
             self::$days = [];
             foreach (get_declared_classes() as $class) {
