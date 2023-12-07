@@ -41,12 +41,12 @@ class DaysRegister
     static function days(): array
     {
         if (!self::$days) {
-            require __DIR__ . '/../One/DayOne.php';
-            require __DIR__ . '/../Two/DayTwo.php';
-            require __DIR__ . '/../Three/DayThree.php';
-            require __DIR__ . '/../Four/DayFour.php';
-            require __DIR__ . '/../Five/DayFive.php';
-            require __DIR__ . '/../Six/DaySix.php';
+            require __DIR__ . '/../Day01/Day01.php';
+            require __DIR__ . '/../Day02/Day02.php';
+            require __DIR__ . '/../Day03/Day03.php';
+            require __DIR__ . '/../Day04/Day04.php';
+            require __DIR__ . '/../Day05/Day05.php';
+            require __DIR__ . '/../Day06/Day06.php';
 
             self::$days = [];
             foreach (get_declared_classes() as $class) {

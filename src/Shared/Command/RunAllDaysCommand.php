@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 namespace AOC\Shared\Command;
 
-use AOC\One\DayOne;
+use AOC\Day01\Day01;
 use AOC\Shared\DataProvider\FileReader;
 use AOC\Shared\DaysRegister;
-use AOC\Two\DayTwo;
+use AOC\Day02\Day02;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\ProgressBar;
