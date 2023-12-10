@@ -19,27 +19,29 @@ class Day05 extends AbstractAocDay
     public function partTwo(): string
     {
         return '???';
-        $almanac = $this->data();
-        $result = null;
-        for ($k = 0; $k < count($almanac->seeds); $k += 2) {
-            print_r($k / 2 . '/' . count($almanac->seeds) / 2 . ' range');
-            print_r(PHP_EOL);
-            for ($i = $almanac->seeds[$k]; $i < $almanac->seeds[$k] + $almanac->seeds[$k + 1]; $i++) {
-                print_r('   seed : ' . $i);
-                print_r(PHP_EOL);
-                $tmpAlmanac = new Almanac(
-                    seeds: [$i],
-                    tables: $almanac->tables,
-                );
-                $locations = $tmpAlmanac->seedsLocations();
-                $tmpResult = min($locations);
-                if (!isset($result) || $tmpResult < $result) {
-                    $result = $tmpResult;
-                }
-                unset($tmpAlmanac);
-            }
-        }
-        return $result;
+        /**
+         * $almanac = $this->data();
+         * $result = null;
+         * for ($k = 0; $k < count($almanac->seeds); $k += 2) {
+         * print_r($k / 2 . '/' . count($almanac->seeds) / 2 . ' range');
+         * print_r(PHP_EOL);
+         * for ($i = $almanac->seeds[$k]; $i < $almanac->seeds[$k] + $almanac->seeds[$k + 1]; $i++) {
+         * print_r('   seed : ' . $i);
+         * print_r(PHP_EOL);
+         * $tmpAlmanac = new Almanac(
+         * seeds: [$i],
+         * tables: $almanac->tables,
+         * );
+         * $locations = $tmpAlmanac->seedsLocations();
+         * $tmpResult = min($locations);
+         * if (!isset($result) || $tmpResult < $result) {
+         * $result = $tmpResult;
+         * }
+         * unset($tmpAlmanac);
+         * }
+         * }
+         * return $result;
+         */
     }
 
     private function data(): Almanac

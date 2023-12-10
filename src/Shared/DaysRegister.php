@@ -48,6 +48,7 @@ class DaysRegister
             require __DIR__ . '/../Day05/Day05.php';
             require __DIR__ . '/../Day06/Day06.php';
             require __DIR__ . '/../Day07/Day07.php';
+            require __DIR__ . '/../Day08/Day08.php';
             require __DIR__ . '/../Day09/Day09.php';
 
             self::$days = [];
