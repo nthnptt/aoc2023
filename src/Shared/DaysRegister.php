@@ -50,6 +50,7 @@ class DaysRegister
             require __DIR__ . '/../Day07/Day07.php';
             require __DIR__ . '/../Day08/Day08.php';
             require __DIR__ . '/../Day09/Day09.php';
+            require __DIR__ . '/../Day11/Day11.php';
 
             self::$days = [];
             foreach (get_declared_classes() as $class) {

@@ -18,7 +18,6 @@ readonly class HandJokerRule extends Hand
         $numberOfJoker = $numberOfCardByType['J'] ?? 0;
         unset($numberOfCardByType['J']);
         rsort($numberOfCardByType);
-        print_r($numberOfCardByType);
         $numberOfCardByType[0] += $numberOfJoker;
         return $numberOfCardByType;
     }
