@@ -25,7 +25,7 @@ class RunAllDaysCommand extends Command
         foreach ($days as $key => $day) {
             $resultPartOne = $day->partOne();
             $resultPartTwo = $day->partTwo();
-            $rows[] = [$key + 1, $resultPartOne, $resultPartTwo];
+            $rows[] = [$key, $resultPartOne, $resultPartTwo];
             $progressBar->advance();
         }
         $progressBar->finish();

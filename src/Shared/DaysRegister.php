@@ -34,7 +34,9 @@ class DaysRegister
      */
     public static function getDays(): array
     {
-        return array_map(fn($day) => self::getDay($day), array_keys(self::days()));
+        $keys = array_keys(self::days());
+        $days = array_map(fn($day) => self::getDay($day), $keys);
+        return array_combine($keys, $days);
     }
 
     private

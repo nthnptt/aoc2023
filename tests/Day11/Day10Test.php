@@ -1,18 +1,18 @@
 <?php
 declare(strict_types=1);
 
-namespace Day10;
+namespace Day11;
 
-use AOC\Day10\Day10;
+use AOC\Day11\Day11;
 use PHPUnit\Framework\TestCase;
 use Test\Utils\InMemoryDataProviderLines;
 
-class Day10Test extends TestCase
+class Day11Test extends TestCase
 {
 
     public function testPartOne(): void
     {
-        $day = new Day10(new InMemoryDataProviderLines([
+        $day = new Day11(new InMemoryDataProviderLines([
             '...#......',
             '.......#..',
             '#.........',
